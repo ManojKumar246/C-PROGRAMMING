@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+    float p;
+    scanf("%f",&p);
+    float t=p/10;
+    printf("%.2f",p-t);
+
+    return 0;
+}
