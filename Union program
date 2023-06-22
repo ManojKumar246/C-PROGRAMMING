@@ -1,0 +1,35 @@
+#include<stdlib.h>
+struct shop
+{
+    int price;
+    union idea
+    {
+        long int tag_number;
+        struct mobile
+        {
+            char Name[20];
+            char brand[20];
+            float size;
+        }m;
+        struct food
+        {
+            char *name;
+            int quantity;
+        }f;
+    }i;
+}s;
+int main(int argc,char *argv[])
+{
+   /* s.i.f.name=argv[1];
+    printf("%s",s.i.f.name);
+    s.i.tag_number=atol(argv[2]);
+    printf(" %ld",s.i.tag_number);
+    s.i.f=atoi(argv[2]);
+    printf("%d",s.price);
+    printf("%s",s.i.f.name);
+    printf("%d",s.i.f.qunatity);*/
+    s.i.f.name=argv[1];
+    strcpy(s.i.m.Name,argv[2]);
+    printf("%s %s",s.i.f.name,s.i.m.Name);
+    
+}
